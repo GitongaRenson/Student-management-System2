@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Student Report </title>
+        <style>
+            @page {
+                size: letter landscape;
+                margin: 2cm;
+            }
+            table { -pdf-keep-with-next: true; }
+
+            @page  {
+                size: a3;
+                background-opacity: 2;
+                background-image: url('');
+            }
+
+        </style>
+    </head>
+    <body>
+        <div>
+            <center>
+                <img src="http://127.0.0.1:8000/static/SMS.png" width="250" height="120">
+            </center>
+        </div>
+        <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Number</th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Gender</th>
+                <th scope="col">Course</th>
+                <th scope="col">Phone Number</th>
+                <th scope="col">Reported On</th>
+              </tr>
+            </thead>
+            <tbody>
+            {% for student in searched_queryset %}
+              <tr>
+                <th scope="row">{{student.id}}</th>
+                <td>{{student.name}}</td>
+                <td>{{student.email}}</td>
+                <td>{{student.gender}}</td>
+                <td>{{student.course}}</td>
+                <td>{{student.phone_number}}</td>
+                <td>{{student.reported_on}}</td>
+              </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </body>
+</html>

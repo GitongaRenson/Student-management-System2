@@ -1,0 +1,6 @@
+*.env
+Pipfile
+StudentMarks/Pipfile 
+**/migrations
+**/migrations/*
+**/static

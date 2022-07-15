@@ -1,0 +1,10 @@
+{% extends 'home/index.html'  %}
+
+{% block content %}
+<h3> Update Student Data Here</h3>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <input type="submit" value="Submit">
+</form>
+{% endblock %}
