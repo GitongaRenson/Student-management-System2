@@ -195,7 +195,7 @@ STATIC_ROOT =  os.path.join(REPOSITORY_ROOT,'static/',)
 MEDIA_URL = 'media/'
 MEDIA_ROOT = os.path.join(REPOSITORY_ROOT,'MEDIA/')
 STATICFILES_STORAGE='whitenoise.storage.CompressedManifestStaticFilesStorage'
-django_heroku.settings(locals())
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
@@ -224,3 +224,5 @@ MESSAGE_TAGS = {
     messages.WARNING: 'alert-warning',
     messages.ERROR: 'alert-danger',
 }
+
+django_heroku.settings(locals())
