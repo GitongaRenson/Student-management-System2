@@ -13,7 +13,7 @@ re_path(r'^simulate-adding-students/',views.simulate_adding_students,name='simul
  re_path(r'^update-student/(?P<id>[\w-]+)/$',views.update_student,name='update_student'),
  re_path(r'^delete-students/(?P<id>[\w-]+)/$',views.delete_student,name='delete_student'),
  re_path(r'^search-student/',views.search_student,name='search_student'), 
- re_path(r'^',views.index,name='index'),
+ re_path(r'^$',views.index,name='index'),
  
 ]
 
