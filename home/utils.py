@@ -174,6 +174,6 @@ def generate_pdf(request,searched_queryset):
     pdf = render_to_pdf('home/pdf_template.html',context_dict)
     if pdf:
         response = HttpResponse(pdf, content_type='application/pdf')
-        content = "attachment; filename='Erp_students.pdf'"
+        content = "attachment; filename='students.pdf'"
         response['Content-Disposition'] = content
         return response
